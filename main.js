@@ -146,9 +146,6 @@ const fetchData = async (url) => {
   return json;
 };
 
-let selectedChar = [];
-let pageParam = "";
-let allCharacters = [];
 
 function movieNames(movies) {
   let movieNames = [];
@@ -364,19 +361,24 @@ let compare = () => {
   compareResultContainer.append(compareResult);
 };
 
-///// BUTTONS /////
+
 let getInfoBtn = document.querySelector("#getInfoBtn");
 let compareResultContainer = document.querySelector(".compareResult");
 let compareResult = document.createElement("div");
 compareResult.setAttribute("id","compareResultDiv");
+
+let selectedChar = [];
+let allCharacters = [];
+///// BUTTONS /////
 getInfoBtn.addEventListener("click", () => {
-  selectedChar = [];
   compareBtn.disabled = false;
   movieNameBtn.disabled = false;
   firstAppearBtn.disabled = false;
   homePlanetBtn.disabled = false;
   vehicleBtn.disabled = false;
   compareResultContainer.innerHTML = "";
+
+  selectedChar = [];
   let selectedOne = allCharacters.find((item) => item.name === dropdown1.value);
   let selectedTwo = allCharacters.find((item) => item.name === dropdown2.value);
   console.log(selectedOne);
