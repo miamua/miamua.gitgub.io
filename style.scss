@@ -1,0 +1,42 @@
+.profileContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+
+
+    #char1{
+        
+        #char1MoviesDiv{
+            color: black;
+        }
+
+        #char1PicDiv{
+            border: solid black 1px;
+            padding: 20px;
+        }
+    }
+    #char2{
+        #char2MoviesDiv{
+            color: black;
+        }
+
+        #char2PicDiv{
+            border: solid black 1px;
+            padding: 20px;
+        }
+       
+    }
+}
+
+.compareResult{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    #compareResultDiv{
+        border: 1px solid black;
+        width: 50%;
+        padding: 20px;
+
+    }
+        
+}
